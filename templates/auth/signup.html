@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block cntr %}
+
+
+  <div>
+    <h1 style="    color: green;
+        text-align: center;
+        margin-bottom: 2%;
+        margin-top: 1%;">SIGNup FORM</h1>
+  </div>
+
+  <div style="margin-left: 27%; margin-right: 27%;">
+    <form action="savedata" method="post">
+      {% csrf_token %}
+
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">Username</span>
+          <input type="text" class="form-control" name="username" placeholder="Enter Unique Username"
+            aria-describedby="basic-addon1">
+        </div>
+      </div>
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">First Name</span>
+          <input type="text" class="form-control" name="fname" placeholder="Enter First Name"
+            aria-describedby="basic-addon1">
+        </div>
+      </div>
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">Last Name</span>
+          <input type="text" class="form-control" name="lname" placeholder="Enter Last Name"
+            aria-describedby="basic-addon1">
+        </div>
+      </div>
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">@ E-mail</span>
+          <input type="email" class="form-control" name="email" placeholder="Enter Email"
+            aria-describedby="basic-addon1">
+        </div>
+      </div>
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">Password</span>
+          <input type="password" class="form-control" name="password" placeholder="Enter Hard Password"
+            aria-describedby="basic-addon1">
+        </div>
+      </div>
+
+
+      <div style="display: flex;
+      justify-content: center;">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  {% endblock cntr %}
+
+
+  {% block title %}SIGNup{% endblock title %}
+
