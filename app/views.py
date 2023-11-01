@@ -114,3 +114,5 @@ def detethis(request, x):
     x.delete()
     return redirect("showdata")
 
+def helo():
+    return("hlo")
