@@ -19,5 +19,7 @@ urlpatterns = [
     path("updatenow/<int:x>", views.update, name = "updatenow"),
 
     path("delete/<int:x>", views.detethis),
+
+    path("search", views.search),
     
 ]

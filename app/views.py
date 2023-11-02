@@ -114,5 +114,9 @@ def detethis(request, x):
     x.delete()
     return redirect("showdata")
 
-def helo():
-    return("hlo")
+def search(request):
+    if request.method == "GET":
+        dataa=request.GET.get("xyz")
+        data = ContactU.objects.filter(message__contains = dataa) or ContactU.objects.filter(Name__contains = dataa)
+        print()
+        return render(request, "showdata.html", {"data" : data})
