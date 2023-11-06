@@ -178,22 +178,22 @@
         {% csrf_token %}
     <div class="formgroup" id="name-form">
         <label for="name">Name</label>
-        <input type="text" name="Nname" />
+        <input type="text" name="Nname" required />
     </div>
     
     <div class="formgroup" id="email-form">
         <label for="number">Phone Number</label>
-        <input type="number" name="Pnumber" />
+        <input type="number" name="Pnumber" required />
     </div>
     
     <div class="formgroup" id="email-form">
         <label for="email">E-mail</label>
-        <input type="email" name="Eemail" />
+        <input type="email" name="Eemail" required />
     </div>
     
     <div class="formgroup" id="message-form">
         <label for="message">Your message</label>
-        <textarea name="Mmessage"></textarea>
+        <textarea name="Mmessage" required ></textarea>
     </div>
         
         <input type="submit" value="Submit Details" />
